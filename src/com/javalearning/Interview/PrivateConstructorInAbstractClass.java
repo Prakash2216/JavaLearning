@@ -22,7 +22,10 @@ abstract class Base
 			System.out.println("Overrided set method");
 		}
 	}
+	
 }
+
+
 public class PrivateConstructorInAbstractClass{
 
 	public static void main(String[] args) {

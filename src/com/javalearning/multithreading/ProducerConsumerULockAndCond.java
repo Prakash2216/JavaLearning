@@ -139,6 +139,8 @@ public class ProducerConsumerULockAndCond
 		Executor ex = Executors.newCachedThreadPool();
 		ex.execute(new BBProducer(bbObj));
 		ex.execute(new BBConsumer(bbObj));
+		ex.execute(new BBConsumer(bbObj));
+		ex.execute(new BBConsumer(bbObj));
 		
 		ThreadPoolExecutor pool = (ThreadPoolExecutor)ex;
 		pool.shutdown();

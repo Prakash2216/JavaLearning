@@ -23,6 +23,7 @@ class SharedObj
 		synchronized (this) 
 		{
 			sharedList.add(num);
+			System.out.println("Produced by: "+Thread.currentThread().getId()+" :: "+num);
 			notifyAll();
 		}
 	}
@@ -58,7 +59,6 @@ class Producer implements Runnable
 			
 		for(int i=0; ;i++)
 		{
-			System.out.println("Produced : "+i);
 			sharedObj.produce(i);
 			try
 			{
@@ -88,7 +88,7 @@ class Consumer implements Runnable
 		while(true)
 		{
 			int num = sharedObj.consume();
-			System.out.println("Consumed : "+num);
+			System.out.println("Consumeded by : "+Thread.currentThread().getId()+" "+num);
 			try
 			{
 				Thread.sleep(1000);
