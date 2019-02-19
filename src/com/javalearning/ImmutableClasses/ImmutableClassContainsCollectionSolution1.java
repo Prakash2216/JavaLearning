@@ -3,7 +3,7 @@ package com.javalearning.ImmutableClasses;
 import java.util.Vector;
 
 /**
- * In this solution of immutable class which contains the collection (Vector) of mutable objects by clone method.
+ * In this solution of immutable class which contains the collection (Vector) of mutable objects.
  * @author 1019270
  *
  */
@@ -93,7 +93,8 @@ final class ImmutableCollSolution
 	}
 
 	public SharedVector getDriveShare() {
-		return (SharedVector) driveShare.clone();
+		//return (SharedVector) driveShare.clone();
+		return driveShare;
 	}
 	
 	

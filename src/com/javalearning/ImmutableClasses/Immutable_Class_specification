@@ -1,0 +1,14 @@
+Immutable Class/Object
+---------------------------
+Immutable class is good for caching purpose because we don't have to be worry about of value changes and another benefit of immutable classes is that
+its inherently thread-safe.
+
+Steps to create Immutable class
+---------------------------------
+	1. Create class as final so that class can't be extended.
+	2. Declare all the fields as private so that direct access is not allowed.
+	3. Do not provide setter methods for variables.
+	4. Make all mutable fields as final so that its can assigned only once.
+	5. Initialize all the variables in constructor by performing deep cloning.
+	6. Clone the object in getter method and return cloned object instead of actual object.
+	
