@@ -64,5 +64,5 @@ class LIS
 		LIS(X);
 	}
 }
-/* This code is contributed by Devesh Agrawal*/
+
 
